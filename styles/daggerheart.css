@@ -1,0 +1,11 @@
+.daggerheart.sheet.actor, .daggerheart.sheet.item {
+    font-family: sans-serif;
+    background: #23272a;
+    color: #eee;
+    padding: 1em;
+}
+input, textarea {
+    background: #111;
+    color: #fff;
+    border: 1px solid #555;
+}

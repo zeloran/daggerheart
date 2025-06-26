@@ -1,0 +1,16 @@
+<form>
+    <h1><input name="name" value="{{actor.name}}" /></h1>
+    <label>Level</label>
+    <input name="system.level" type="number" value="{{system.level}}" />
+    <h2>Traits</h2>
+    {{#each system.traits as |val key|}}
+    <div>
+        <label>{{key}}</label>
+        <input name="system.traits.{{key}}" type="number" value="{{val}}" />
+    </div>
+    {{/each}}
+    <h2>Hit Points</h2>
+    <input name="system.hitPoints.marked" type="number" value="{{system.hitPoints.marked}}" /> /
+    <input name="system.hitPoints.max" type="number" value="{{system.hitPoints.max}}" />
+    <!-- Add stress, subclasses, communities, ancestries, as needed -->
+</form>
