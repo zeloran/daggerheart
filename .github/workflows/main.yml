@@ -11,54 +11,45 @@ permissions:
 
 
 jobs:
-  build:
+  build-and-release:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Set up variables
-        id: get_vars
-        run: |
-          TAG=${GITHUB_REF/refs\/tags\//}
-          PACKAGE_ID=daggerheart
-          echo "TAG_NAME=$TAG" >> $GITHUB_ENV
-          echo "PACKAGE_ID=$PACKAGE_ID" >> $GITHUB_ENV
-          echo "ZIP_NAME=$PACKAGE_ID-$TAG.zip" >> $GITHUB_ENV
-          echo "RELEASE_DOWNLOAD_URL=https://github.com/${{ github.repository }}/releases/download/$TAG/$PACKAGE_ID-$TAG.zip" >> $GITHUB_ENV
-          echo "RELEASE_INSTALL_URL=https://github.com/${{ github.repository }}/releases/download/$TAG/system.json" >> $GITHUB_ENV
-
-      - name: Use Node.js ${{ env.NODE_VERSION }}
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
+          node-version: 20
 
-      - name: Install Dependencies
-        run: npm ci --ignore-scripts
-
-      # If you have a build step, include it here:
-      # - name: Build All
-      #   run: npm run build
-
-      # Optionally: Update manifest and url fields in system.json to match this release/tag (see previous messages)
-
-      - name: Zip package
+      - name: Update manifest and url in system.json
         run: |
-          ZIP="${{ env.ZIP_NAME }}"
-          zip -r "$ZIP" . -x "*.git*" "*.github*" "node_modules/*" "$ZIP" # Exclude common unneeded files
+          node scripts/bump-manifest.js
+        env:
+          RELEASE_VERSION: ${{ github.ref_name }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+
+      # Optional: Build step here
+
+      - name: Create system zip
+        run: |
+          mkdir build
+          shopt -s extglob
+          cp -r !(build) build/
+          cd build
+          zip -r ../daggerheart-system.zip ./
+          cd ..
+
+
+      - name: Check system.json included
+        run: unzip -l daggerheart-system.zip | grep system.json
 
       - name: Create GitHub Release
-        uses: ncipollo/release-action@v1
+        uses: softprops/action-gh-release@v2
         with:
-          allowUpdates: true
-          name: ${{ env.TAG_NAME }}
-          draft: false
-          prerelease: false
-          token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: './system.json, ./${{ env.ZIP_NAME }}'
-          tag: ${{ env.TAG_NAME }}
-          body: |
-            **Installation:**  
-            Use this manifest URL in Foundry's system installer:  
-            ${{ env.RELEASE_INSTALL_URL }}
+          files: |
+            daggerheart-system.zip
+            system.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
