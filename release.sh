@@ -16,7 +16,7 @@ fi
 TAG="$VERSION"
 REPO_URL="https://github.com/$REPO_USER/$REPO_NAME"
 SYSTEM_JSON="system.json"
-ZIP_NAME="$REPO_NAME-$TAG.zip"
+ZIP_NAME="$REPO_NAME-system.zip"
 
 # Check that jq is available
 if ! command -v jq >/dev/null 2>&1; then
@@ -28,9 +28,8 @@ fi
 echo "Updating $SYSTEM_JSON..."
 jq \
   --arg version "$VERSION" \
-  --arg manifest "$REPO_URL/releases/download/$TAG/system.json" \
   --arg download "$REPO_URL/releases/download/$TAG/$ZIP_NAME" \
-  '.version = $version | .manifest = $manifest | .url = $url' \
+  '.version = $version | .download = $download' \
   "$SYSTEM_JSON" > "$SYSTEM_JSON.tmp" && mv "$SYSTEM_JSON.tmp" "$SYSTEM_JSON"
 
 # Commit and push
@@ -49,3 +48,4 @@ echo "  - $ZIP_NAME"
 echo "  - $SYSTEM_JSON"
 echo "Copy the manifest URL for FVTT installer:"
 echo "  $REPO_URL/releases/download/$TAG/system.json"
+
