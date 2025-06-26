@@ -30,10 +30,12 @@ jobs:
       - name: Create system zip
         run: |
           mkdir build
-          cp -r * build/
+          shopt -s extglob
+          cp -r !(build) build/
           cd build
           zip -r ../daggerheart-system.zip ./
           cd ..
+
 
       - name: Check system.json included
         run: unzip -l daggerheart-system.zip | grep system.json
