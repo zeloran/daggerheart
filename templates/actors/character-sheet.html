@@ -1,7 +1,9 @@
+<!-- templates/actors/character-sheet.html -->
 <form>
     <h1><input name="name" value="{{actor.name}}" /></h1>
     <label>Level</label>
     <input name="system.level" type="number" value="{{system.level}}" />
+
     <h2>Traits</h2>
     {{#each system.traits as |val key|}}
     <div>
@@ -9,8 +11,67 @@
         <input name="system.traits.{{key}}" type="number" value="{{val}}" />
     </div>
     {{/each}}
+
     <h2>Hit Points</h2>
-    <input name="system.hitPoints.marked" type="number" value="{{system.hitPoints.marked}}" /> /
+    <label>Marked</label>
+    <input name="system.hitPoints.marked" type="number" value="{{system.hitPoints.marked}}" />
+    /
+    <label>Max</label>
     <input name="system.hitPoints.max" type="number" value="{{system.hitPoints.max}}" />
-    <!-- Add stress, subclasses, communities, ancestries, as needed -->
+
+    <h2>Stress</h2>
+    <label>Marked</label>
+    <input name="system.stress.marked" type="number" value="{{system.stress.marked}}" />
+    /
+    <label>Max</label>
+    <input name="system.stress.max" type="number" value="{{system.stress.max}}" />
+
+    <h2>Evasion</h2>
+    <input name="system.evasion" type="number" value="{{system.evasion}}" />
+
+    <h2>Armor</h2>
+    <input name="system.armor.name" value="{{system.armor.name}}" placeholder="Armor Name" />
+    <input name="system.armor.baseScore" type="number" value="{{system.armor.baseScore}}" placeholder="Base Score" />
+    <input name="system.armor.thresholdMinor" type="number" value="{{system.armor.thresholdMinor}}" placeholder="Minor" />
+    <input name="system.armor.thresholdMajor" type="number" value="{{system.armor.thresholdMajor}}" placeholder="Major" />
+    <input name="system.armor.thresholdSevere" type="number" value="{{system.armor.thresholdSevere}}" placeholder="Severe" />
+    <input name="system.armor.slots" type="number" value="{{system.armor.slots}}" placeholder="Slots" />
+
+    <h2>Hope Die</h2>
+    <input name="system.hopeDie" type="number" value="{{system.hopeDie}}" />
+
+    <h2>Fear Die</h2>
+    <input name="system.fearDie" type="number" value="{{system.fearDie}}" />
+
+    <h2>Proficiency</h2>
+    <input name="system.proficiency" type="number" value="{{system.proficiency}}" />
+
+    <h2>Experience</h2>
+    <textarea name="system.experience">{{system.experience}}</textarea>
+
+    <h2>Subclasses</h2>
+    <label>Foundation</label>
+    <textarea name="system.subclasses.foundation">{{system.subclasses.foundation}}</textarea>
+    <label>Specialization</label>
+    <textarea name="system.subclasses.specialization">{{system.subclasses.specialization}}</textarea>
+    <label>Mastery</label>
+    <textarea name="system.subclasses.mastery">{{system.subclasses.mastery}}</textarea>
+
+    <h2>Communities</h2>
+    <textarea name="system.communities">{{system.communities}}</textarea>
+
+    <h2>Ancestries</h2>
+    <textarea name="system.ancestries">{{system.ancestries}}</textarea>
+
+    <h2>Abilities</h2>
+    <textarea name="system.abilities">{{system.abilities}}</textarea>
+
+    <h2>Spells</h2>
+    <textarea name="system.spells">{{system.spells}}</textarea>
+
+    <h2>Inventory</h2>
+    <textarea name="system.inventory">{{system.inventory}}</textarea>
+
+    <h2>Story</h2>
+    <textarea name="system.story">{{system.story}}</textarea>
 </form>
