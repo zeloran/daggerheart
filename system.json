@@ -2,7 +2,7 @@
   "id": "daggerheart",
   "title": "Daggerheart",
   "description": "Daggerheart TTRPG system for Foundry VTT.",
-  "version": "0.1.0f",
+  "version": "0.1.0g",
   "compatibility": {
     "minimum": 13,
     "verified": 13
@@ -17,5 +17,5 @@
   "packs": [],
   "templateVersion": 2,
   "manifest": "https://raw.githubusercontent.com/zeloran/daggerheart/refs/heads/main/system.json",
-  "download": "https://github.com/zeloran/daggerheart/releases/download/v0.1.0f/daggerheart-system.zip"
+  "download": "https://github.com/zeloran/daggerheart/releases/download/v0.1.0g/daggerheart-system.zip"
 }
