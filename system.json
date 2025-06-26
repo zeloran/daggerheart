@@ -1,0 +1,19 @@
+{
+  "name": "daggerheart",
+  "title": "Daggerheart",
+  "description": "Daggerheart TTRPG system for Foundry VTT.",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": 13,
+    "verified": 13
+  },
+  "authors": [{
+    "name": "Pablo Queirolo"
+  }],
+  "scripts": ["module/daggerheart.js"],
+  "styles": [
+    "styles/daggerheart.css"
+  ],
+  "packs": [],
+  "templateVersion": 2
+}
