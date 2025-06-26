@@ -12,7 +12,7 @@
       "name": "Pablo Queirolo"
     }
   ],
-  "scripts": [
+  "esmodules": [
     "module/daggerheart.js"
   ],
   "styles": [
