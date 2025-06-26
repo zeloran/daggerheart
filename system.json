@@ -20,7 +20,7 @@
   ],
   "packs": [],
   "templateVersion": 2,
-  "manifest": "https://github.com/zeloran/daggerheart/releases/download/release-v0.1.0i/system.json",
-  "download": "https://github.com/zeloran/daggerheart/releases/download/v0.1.0h/daggerheart-system.zip",
+  "manifest": "https://github.com/zeloran/daggerheart/releases/download/v0.1.0i/system.json",
+  "download": "https://github.com/zeloran/daggerheart/releases/download/v0.1.0i/daggerheart-v0.1.0i.zip",
   "url": "https://github.com/zeloran/daggerheart/releases/download/release-v0.1.0i/daggerheart-release-v0.1.0i.zip"
 }
