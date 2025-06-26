@@ -13,7 +13,7 @@ else
   VERSION="$1"
 fi
 
-TAG="release-$VERSION"
+TAG="$VERSION"
 REPO_URL="https://github.com/$REPO_USER/$REPO_NAME"
 SYSTEM_JSON="system.json"
 ZIP_NAME="$REPO_NAME-$TAG.zip"
@@ -29,7 +29,7 @@ echo "Updating $SYSTEM_JSON..."
 jq \
   --arg version "$VERSION" \
   --arg manifest "$REPO_URL/releases/download/$TAG/system.json" \
-  --arg url "$REPO_URL/releases/download/$TAG/$ZIP_NAME" \
+  --arg download "$REPO_URL/releases/download/$TAG/$ZIP_NAME" \
   '.version = $version | .manifest = $manifest | .url = $url' \
   "$SYSTEM_JSON" > "$SYSTEM_JSON.tmp" && mv "$SYSTEM_JSON.tmp" "$SYSTEM_JSON"
 
@@ -42,9 +42,6 @@ git push
 git tag "$TAG"
 git push origin "$TAG"
 
-# Create zip archive (excluding .git and node_modules)
-echo "Zipping system..."
-zip -r "$ZIP_NAME" . -x "*.git*" "node_modules/*" "$ZIP_NAME"
 
 echo "Done!"
 echo "Go to GitHub Releases for $TAG and upload:"
