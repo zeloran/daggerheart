@@ -2,20 +2,25 @@
   "id": "daggerheart",
   "title": "Daggerheart",
   "description": "Daggerheart TTRPG system for Foundry VTT.",
-  "version": "0.1.0h",
+  "version": "v0.1.0i",
   "compatibility": {
     "minimum": 13,
     "verified": 13
   },
-  "authors": [{
-    "name": "Pablo Queirolo"
-  }],
-  "scripts": ["module/daggerheart.js"],
+  "authors": [
+    {
+      "name": "Pablo Queirolo"
+    }
+  ],
+  "scripts": [
+    "module/daggerheart.js"
+  ],
   "styles": [
     "styles/daggerheart.css"
   ],
   "packs": [],
   "templateVersion": 2,
-  "manifest": "https://raw.githubusercontent.com/zeloran/daggerheart/refs/heads/main/system.json",
-  "download": "https://github.com/zeloran/daggerheart/releases/download/v0.1.0h/daggerheart-system.zip"
+  "manifest": "https://github.com/zeloran/daggerheart/releases/download/release-v0.1.0i/system.json",
+  "download": "https://github.com/zeloran/daggerheart/releases/download/v0.1.0h/daggerheart-system.zip",
+  "url": "https://github.com/zeloran/daggerheart/releases/download/release-v0.1.0i/daggerheart-release-v0.1.0i.zip"
 }
