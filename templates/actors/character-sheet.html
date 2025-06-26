@@ -1,77 +1,117 @@
-<!-- templates/actors/character-sheet.html -->
-<form>
-    <h1><input name="name" value="{{actor.name}}" /></h1>
-    <label>Level</label>
-    <input name="system.level" type="number" value="{{system.level}}" />
-
-    <h2>Traits</h2>
-    {{#each system.traits as |val key|}}
-    <div>
-        <label>{{key}}</label>
-        <input name="system.traits.{{key}}" type="number" value="{{val}}" />
+<form class="dh-sheet">
+    <div class="dh-header">
+        <div class="dh-avatar"></div>
+        <div class="dh-char-name-block">
+            <div class="dh-char-name">{{actor.name}}</div>
+            <div class="dh-char-desc">WILDBORNE RIBBET DRUID <span class="dh-char-title">(WARDEN OF THE ELEMENTS)</span></div>
+        </div>
+        <div class="dh-banner-placeholder"></div>
     </div>
-    {{/each}}
 
-    <h2>Hit Points</h2>
-    <label>Marked</label>
-    <input name="system.hitPoints.marked" type="number" value="{{system.hitPoints.marked}}" />
-    /
-    <label>Max</label>
-    <input name="system.hitPoints.max" type="number" value="{{system.hitPoints.max}}" />
+    <div class="dh-row dh-main-stats">
+        <div class="dh-col dh-evasion">
+            <div class="dh-stat-label">EVASION</div>
+            <div class="dh-stat-val">{{system.evasion}}</div>
+        </div>
+        <div class="dh-col dh-armor">
+            <div class="dh-stat-label">ARMOR</div>
+            <div class="dh-stat-val">{{system.armor.value}}</div>
+        </div>
+        <div class="dh-col dh-armor-slots">
+            <div class="dh-stat-label">ARMOR SLOTS</div>
+            <div class="dh-armor-slot-circles">
+                <span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span>
+            </div>
+        </div>
+        <div class="dh-col dh-level">
+            <div class="dh-stat-label">LEVEL</div>
+            <div class="dh-stat-val">{{system.level}}</div>
+        </div>
+    </div>
 
-    <h2>Stress</h2>
-    <label>Marked</label>
-    <input name="system.stress.marked" type="number" value="{{system.stress.marked}}" />
-    /
-    <label>Max</label>
-    <input name="system.stress.max" type="number" value="{{system.stress.max}}" />
+    <div class="dh-row dh-traits">
+        {{#each system.traits as |val key|}}
+        <div class="dh-trait">
+            <div class="dh-trait-label">{{key}}</div>
+            <div class="dh-trait-val">{{val}}</div>
+            <div class="dh-trait-desc">{{lookup ../traitDescriptions key}}</div>
+        </div>
+        {{/each}}
+    </div>
 
-    <h2>Evasion</h2>
-    <input name="system.evasion" type="number" value="{{system.evasion}}" />
+    <div class="dh-row dh-damage-row">
+        <div class="dh-damage-type minor">
+            <div class="dh-damage-label">MINOR DAMAGE</div>
+            <div class="dh-damage-val">{{system.damage.minor}}</div>
+            <div class="dh-damage-hint">Mark 1 HP</div>
+        </div>
+        <div class="dh-damage-type major">
+            <div class="dh-damage-label">MAJOR DAMAGE</div>
+            <div class="dh-damage-val">{{system.damage.major}}</div>
+            <div class="dh-damage-hint">Mark 2 HP</div>
+        </div>
+        <div class="dh-damage-type severe">
+            <div class="dh-damage-label">SEVERE DAMAGE</div>
+            <div class="dh-damage-val">{{system.damage.severe}}</div>
+            <div class="dh-damage-hint">Mark 3 HP</div>
+        </div>
+    </div>
 
-    <h2>Armor</h2>
-    <input name="system.armor.name" value="{{system.armor.name}}" placeholder="Armor Name" />
-    <input name="system.armor.baseScore" type="number" value="{{system.armor.baseScore}}" placeholder="Base Score" />
-    <input name="system.armor.thresholdMinor" type="number" value="{{system.armor.thresholdMinor}}" placeholder="Minor" />
-    <input name="system.armor.thresholdMajor" type="number" value="{{system.armor.thresholdMajor}}" placeholder="Major" />
-    <input name="system.armor.thresholdSevere" type="number" value="{{system.armor.thresholdSevere}}" placeholder="Severe" />
-    <input name="system.armor.slots" type="number" value="{{system.armor.slots}}" placeholder="Slots" />
+    <div class="dh-row dh-hp-stress-row">
+        <div class="dh-bar-block">
+            <div class="dh-bar-label">HP</div>
+            <div class="dh-bar dh-hp-bar">
+                <span class="dh-hp-segment"></span><span class="dh-hp-segment"></span><span class="dh-hp-segment"></span>
+                <span class="dh-hp-segment"></span><span class="dh-hp-segment"></span><span class="dh-hp-segment"></span>
+            </div>
+            <div class="dh-bar-legend">1/6 MARKED</div>
+        </div>
+        <div class="dh-bar-block">
+            <div class="dh-bar-label">STRESS</div>
+            <div class="dh-bar dh-stress-bar">
+                <span class="dh-stress-segment"></span><span class="dh-stress-segment"></span>
+                <span class="dh-stress-segment"></span><span class="dh-stress-segment"></span>
+                <span class="dh-stress-segment"></span><span class="dh-stress-segment"></span>
+            </div>
+            <div class="dh-bar-legend">0/6 MARKED</div>
+        </div>
+    </div>
 
-    <h2>Hope Die</h2>
-    <input name="system.hopeDie" type="number" value="{{system.hopeDie}}" />
+    <div class="dh-row dh-weapons-row">
+        <div class="dh-weapons-block">
+            <div class="dh-section-label">ACTIVE WEAPONS</div>
+            <div class="dh-weapon-list">
+                <div class="dh-weapon-block">
+                    <div class="dh-weapon-name">MACE</div>
+                    <div class="dh-weapon-details">MELEE • +0 STRENGTH • 1d8+1 PHYSICAL</div>
+                </div>
+                <div class="dh-weapon-block">
+                    <div class="dh-weapon-name">BEASTFORM - STALKING ARACHNID</div>
+                    <div class="dh-weapon-details">MELEE • +2 FINESSE • 1d6+1 PHYSICAL</div>
+                </div>
+            </div>
+        </div>
+        <div class="dh-hope-block">
+            <div class="dh-section-label">HOPE</div>
+            <div class="dh-hope-dots">
+                <span class="dh-hope-dot filled"></span>
+                <span class="dh-hope-dot filled"></span>
+                <span class="dh-hope-dot"></span>
+                <span class="dh-hope-dot"></span>
+                <span class="dh-hope-dot"></span>
+                <span class="dh-hope-dot"></span>
+            </div>
+            <div class="dh-hope-count">2/6</div>
+        </div>
+    </div>
 
-    <h2>Fear Die</h2>
-    <input name="system.fearDie" type="number" value="{{system.fearDie}}" />
-
-    <h2>Proficiency</h2>
-    <input name="system.proficiency" type="number" value="{{system.proficiency}}" />
-
-    <h2>Experience</h2>
-    <textarea name="system.experience">{{system.experience}}</textarea>
-
-    <h2>Subclasses</h2>
-    <label>Foundation</label>
-    <textarea name="system.subclasses.foundation">{{system.subclasses.foundation}}</textarea>
-    <label>Specialization</label>
-    <textarea name="system.subclasses.specialization">{{system.subclasses.specialization}}</textarea>
-    <label>Mastery</label>
-    <textarea name="system.subclasses.mastery">{{system.subclasses.mastery}}</textarea>
-
-    <h2>Communities</h2>
-    <textarea name="system.communities">{{system.communities}}</textarea>
-
-    <h2>Ancestries</h2>
-    <textarea name="system.ancestries">{{system.ancestries}}</textarea>
-
-    <h2>Abilities</h2>
-    <textarea name="system.abilities">{{system.abilities}}</textarea>
-
-    <h2>Spells</h2>
-    <textarea name="system.spells">{{system.spells}}</textarea>
-
-    <h2>Inventory</h2>
-    <textarea name="system.inventory">{{system.inventory}}</textarea>
-
-    <h2>Story</h2>
-    <textarea name="system.story">{{system.story}}</textarea>
+    <div class="dh-row dh-experience-row">
+        <div class="dh-exp-block">
+            <div class="dh-section-label">EXPERIENCE</div>
+            <div class="dh-exp-list">
+                <div class="dh-exp-item">FRIENDLY TO ALL <span class="dh-exp-score">+2</span></div>
+                <div class="dh-exp-item">ANIMAL WHISPERER <span class="dh-exp-score">+2</span></div>
+            </div>
+        </div>
+    </div>
 </form>
