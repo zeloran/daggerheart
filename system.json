@@ -15,5 +15,6 @@
     "styles/daggerheart.css"
   ],
   "packs": [],
-  "templateVersion": 2
+  "templateVersion": 2,
+  "manifest": "https://raw.githubusercontent.com/zeloran/daggerheart/refs/heads/main/system.json"
 }
