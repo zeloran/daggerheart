@@ -33,14 +33,6 @@ Hooks.once("init", function() {
     // Register document classes
     CONFIG.Actor.dataModels.character = DHActorDataModel;
 
-    // Optional: custom dice • “Duality Dice” helper
-    game.dice.DH = {
-        rollDuality: async (heartDie = "d12", edgeDie = "d8", mods = 0) => {
-            const roll = await new Roll(`${heartDie} + ${edgeDie} + ${mods}`).roll();
-            roll.toMessage({ flavor: "Duality Dice" });
-            return roll;
-        }
-    };
 
     Actors.registerSheet("daggerheart", DHCharacterSheet, {
         label: "Daggerheart Character",

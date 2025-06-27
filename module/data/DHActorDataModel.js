@@ -17,8 +17,7 @@ export default class DHActorDataModel extends foundry.abstract.TypeDataModel {
 
             // Physical health – each slot is a boolean “marked / clear”
             hitPoints:   new fields.ArrayField(
-                new fields.BooleanField({ initial: false }),         // slot 1
-                3                                                   // default size; class sheets can overwrite
+                new fields.BooleanField({ initial: false })
             ),
 
             // Stress & Hope
