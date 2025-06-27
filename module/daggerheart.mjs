@@ -42,10 +42,10 @@ Hooks.once("init", function() {
         }
     };
 
-    Actors.unregisterSheet("core", ActorSheet);
-    Actors.registerSheet("daggerheart", DHCharacterSheet, { makeDefault: true });
-    // Replace core sheet with ours
-    Actors.unregisterSheet("core", ActorSheet);
-    Actors.registerSheet("daggerheart", DHCharacterSheet, { types: ["character"], makeDefault: true });
+    Actors.registerSheet("daggerheart", DHCharacterSheet, {
+        label: "Daggerheart Character",
+        types: ["character"],   // must match your Actor type exactly
+        makeDefault: true
+    });
 
 });

@@ -13,7 +13,8 @@
     }
   ],
   "esmodules": [
-    "module/daggerheart.mjs"
+    "module/daggerheart.mjs",
+    "module/sheets/character-sheet.js"
   ],
   "styles": [
     "styles/daggerheart.css",
