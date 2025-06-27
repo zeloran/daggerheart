@@ -13,27 +13,26 @@
     }
   ],
   "esmodules": [
-    "module/daggerheart.js"
+    "module/daggerheart.mjs"
   ],
   "styles": [
     "styles/daggerheart.css",
     "styles/item-sheet.css"
   ],
   "documentTypes": {
+    "Actor": {
+      "character": {},
+      "npc": {}
+    },
     "Item": {
-      "subclass-features": {}
+      "card":  {},
+      "weapon":{},
+      "armour":{}
     }
   },
-  "packs": [
-    {
-      "name": "subclass-features",
-      "label": "Subclass Features",
-      "system": "daggerheart",
-      "path": "packs/subclass-features.db",
-      "entity": "Item",
-      "type": "Item"
-    }
-  ],
+  "grid": { "distance": 5, "units": "ft" },
+  "primaryTokenAttribute":   "system.hitPoints",
+  "secondaryTokenAttribute": "system.hope",
   "manifest": "https://raw.githubusercontent.com/zeloran/daggerheart/refs/heads/main/system.json",
   "download": "https://github.com/zeloran/daggerheart/releases/download/v0.1.0t/daggerheart-system.zip"
 }

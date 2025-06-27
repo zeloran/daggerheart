@@ -1,0 +1,65 @@
+<form class="dh-character flexcol" autocomplete="off">
+    <!-- ─── Header ──────────────────────────────────────────────── -->
+    <header class="sheet-header flexrow">
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
+        <div class="header-fields flexcol">
+            <h1><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+
+            <div class="flexrow">
+                <label>Ancestry</label>
+                <input name="system.ancestry"  type="text" value="{{system.ancestry}}"/>
+                <label>Community</label>
+                <input name="system.community" type="text" value="{{system.community}}"/>
+            </div>
+
+            <div class="flexrow">
+                <label>Class</label>
+                <input name="system.clazz"    type="text" value="{{system.clazz}}"/>
+                <label>Subclass</label>
+                <input name="system.subclass" type="text" value="{{system.subclass}}"/>
+            </div>
+        </div>
+    </header>
+
+    <!-- ─── Body ────────────────────────────────────────────────── -->
+    <section class="sheet-body flexrow">
+
+        <!-- Sidebar: traits & resources -->
+        <aside class="sidebar flexcol">
+            <h2>Traits</h2>
+            {{#each system.traits as |val key|}}
+                <div class="trait-row flexrow">
+                    <label>{{capitalize key}}</label>
+                    <input type="number" name="system.traits.{{key}}" value="{{val}}" min="-3" max="3"/>
+                </div>
+            {{/each}}
+
+            <h2>Resources</h2>
+            <div class="resource-row flexrow">
+                <label>Hope</label>
+                <input name="system.hope" type="number" value="{{system.hope}}" min="0"/>
+            </div>
+            <div class="resource-row flexrow">
+                <label>Stress</label>
+                <input name="system.stressMarked" type="number"
+                       value="{{system.stressMarked}}" min="0" max="{{system.stressMax}}"/>
+                / {{system.stressMax}}
+            </div>
+        </aside>
+
+        <!-- Main column: HP, domains, items -->
+        <section class="main flexcol">
+            <h2>Hit Points</h2>
+            <div class="hp-slots flexrow">
+                {{#each system.hitPoints as |slot idx|}}
+                    <input type="checkbox" name="system.hitPoints.{{idx}}" {{#if slot}}checked{{/if}}>
+                {{/each}}
+            </div>
+
+            <h2>Domains</h2>
+            <ul class="domains-list">
+                {{#each system.domains}}<li>{{this}}</li>{{/each}}
+            </ul>
+        </section>
+    </section>
+</form>
