@@ -31,7 +31,7 @@ Hooks.once("init", function() {
     console.log("Daggerheart | Initializing system");
 
     // Register document classes
-    CONFIG.Actor.systemDataModels["character"] = DHActorDataModel;
+    CONFIG.Actor.dataModels.character = DHActorDataModel;
 
     // Optional: custom dice • “Duality Dice” helper
     game.dice.DH = {
