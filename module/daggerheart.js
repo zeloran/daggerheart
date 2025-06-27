@@ -1,5 +1,8 @@
 // ES module entrypoint for Daggerheart system (Foundry V13+)
 
+// Models
+import { SubclassFeatureModel } from "./data/subclass-feature-model.js";
+
 // Actor sheet
 import { DaggerheartActorSheet } from "./actor/sheets/character-sheet.js";
 
@@ -24,11 +27,21 @@ Hooks.once("init", function() {
 
     // Register custom item sheets (one for each type)
     Items.registerSheet("daggerheart", DaggerheartSpellSheet,      { types: ["spell"],       makeDefault: true });
-    Items.registerSheet("daggerheart", DaggerheartSubclassFeatureSheet,   { types: ["subclass-feature"],    makeDefault: true });
+    //Items.registerSheet("daggerheart", DaggerheartSubclassFeatureSheet,   { types: ["subclass-feature"],    makeDefault: true });
     Items.registerSheet("daggerheart", DaggerheartAbilitySheet,    { types: ["ability"],     makeDefault: true });
     Items.registerSheet("daggerheart", DaggerheartAncestrySheet,   { types: ["ancestry"],    makeDefault: true });
     Items.registerSheet("daggerheart", DaggerheartCommunitySheet,  { types: ["community"],   makeDefault: true });
     Items.registerSheet("daggerheart", DaggerheartItemSheet,       { types: ["item"],        makeDefault: true });
     Items.registerSheet("daggerheart", DaggerheartArmorSheet,      { types: ["armor"],       makeDefault: true });
     Items.registerSheet("daggerheart", DaggerheartWeaponSheet,     { types: ["weapon"],      makeDefault: true });
+
+    CONFIG.Item.dataModels["subclass-feature"] = SubclassFeatureModel;
+
+    CONFIG.Item.sheetClasses["subclass-feature"] = CONFIG.Item.sheetClasses["subclass-feature"] || {};
+    CONFIG.Item.sheetClasses["subclass-feature"]["daggerheart"] = {
+        label: "Daggerheart Subclass Feature Sheet",
+        sheetClass: DaggerheartSubclassFeatureSheet,
+        types: ["subclass-feature"],
+        makeDefault: true
+    };
 });
