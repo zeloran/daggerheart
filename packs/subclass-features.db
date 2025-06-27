@@ -1,104 +1,20 @@
-{
-  "_id": "bard_college_of_valor_foundation",
-  "name": "College of Valor – Foundation",
-  "type": "subclass-feature",
-  "img": "systems/daggerheart/assets/subclass-placeholder.svg",
-  "system": {
-    "baseClass": "Bard",
-    "subclass": "College of Valor",
-    "featureType": "foundation",
-    "description": "You inspire courage in your allies and lead by example.",
-    "effect": "Whenever you or an ally within Close range marks a fear token, you can choose to mark a hope token instead.",
-    "trigger": "When you or an ally within Close range would mark a fear token."
-  },
-  "folder": null,
-  "sort": 0,
-  "flags": {}
-}
-{
-  "_id": "bard_college_of_valor_specialization",
-  "name": "College of Valor – Specialization",
-  "type": "subclass-feature",
-  "img": "systems/daggerheart/assets/subclass-placeholder.svg",
-  "system": {
-    "baseClass": "Bard",
-    "subclass": "College of Valor",
-    "featureType": "specialization",
-    "description": "Your musical inspiration can rally your companions and strengthen their resolve.",
-    "effect": "Once per rest, when an ally within Close range marks a hope token, they can immediately take another action.",
-    "trigger": "When an ally within Close range marks a hope token (once per rest)."
-  },
-  "folder": null,
-  "sort": 0,
-  "flags": {}
-}
-{
-  "_id": "bard_college_of_valor_mastery",
-  "name": "College of Valor – Mastery",
-  "type": "subclass-feature",
-  "img": "systems/daggerheart/assets/subclass-placeholder.svg",
-  "system": {
-    "baseClass": "Bard",
-    "subclass": "College of Valor",
-    "featureType": "mastery",
-    "description": "Your valorous deeds are legendary and can turn the tide of battle.",
-    "effect": "When you spend a hope token, all allies within Close range may remove a fear token.",
-    "trigger": "When you spend a hope token."
-  },
-  "folder": null,
-  "sort": 0,
-  "flags": {}
-}
+{"_id":"bard_college_of_valor_foundation","name":"College of Valor – Foundation","type":"subclass-feature","img":"systems/daggerheart/assets/subclass-placeholder.svg","system":{"baseClass":"Bard","subclass":"College of Valor","featureType":"foundation","description":"You inspire courage in your allies and lead by example.","effect":"Whenever you or an ally within Close range marks a fear token, you can choose to mark a hope token instead.","trigger":"When you or an ally within Close range would mark a fear token."},"folder":null,"sort":0,"flags":{}}
+{"_id":"bard_college_of_valor_specialization","name":"College of Valor – Specialization","type":"subclass-feature","img":"systems/daggerheart/assets/subclass-placeholder.svg","system":{"baseClass":"Bard","subclass":"College of Valor","featureType":"specialization","description":"Your musical inspiration can rally your companions and strengthen their resolve.","effect":"Once per rest, when an ally within Close range marks a hope token, they can immediately take another action.","trigger":"When an ally within Close range marks a hope token (once per rest)."},"folder":null,"sort":0,"flags":{}}
+{"_id":"bard_college_of_valor_mastery","name":"College of Valor – Mastery","type":"subclass-feature","img":"systems/daggerheart/assets/subclass-placeholder.svg","system":{"baseClass":"Bard","subclass":"College of Valor","featureType":"mastery","description":"Your valorous deeds are legendary and can turn the tide of battle.","effect":"When you spend a hope token, all allies within Close range may remove a fear token.","trigger":"When you spend a hope token."},"folder":null,"sort":0,"flags":{}}
+{"_id":"bard_college_of_mirrors_foundation","name":"College of Mirrors – Foundation","type":"subclass-feature","img":"systems/daggerheart/assets/subclass-placeholder.svg","system":{"baseClass":"Bard","subclass":"College of Mirrors","featureType":"foundation","description":"You use illusion and misdirection to confound your enemies.","effect":"Once per encounter, when you are targeted by an attack, you can cause the attacker to reroll and use the lower result.","trigger":"When you are targeted by an attack (once per encounter)."},"folder":null,"sort":0,"flags":{}}
+{"_id":"bard_college_of_mirrors_specialization","name":"College of Mirrors – Specialization","type":"subclass-feature","img":"systems/daggerheart/assets/subclass-placeholder.svg","system":{"baseClass":"Bard","subclass":"College of Mirrors","featureType":"specialization","description":"Your illusions are more convincing, able to distract and mislead many foes.","effect":"Once per rest, when you cast an illusion spell, you can affect all enemies within Close range.","trigger":"When you cast an illusion spell (once per rest)."},"folder":null,"sort":0,"flags":{}}
+{"_id":"bard_college_of_mirrors_mastery","name":"College of Mirrors – Mastery","type":"subclass-feature","img":"systems/daggerheart/assets/subclass-placeholder.svg","system":{"baseClass":"Bard","subclass":"College of Mirrors","featureType":"mastery","description":"You can create multiple convincing duplicates of yourself.","effect":"As an action, create three illusory duplicates. Until the end of the encounter, when a creature targets you with an attack, roll a d4. On a 1–3, the attack hits a duplicate instead, which is then destroyed.","trigger":"When you create your illusory duplicates."},"folder":null,"sort":0,"flags":{}}
 
-{
-  "_id": "bard_college_of_mirrors_foundation",
-  "name": "College of Mirrors – Foundation",
-  "type": "subclass-feature",
-  "img": "systems/daggerheart/assets/subclass-placeholder.svg",
-  "system": {
-    "baseClass": "Bard",
-    "subclass": "College of Mirrors",
-    "featureType": "foundation",
-    "description": "You use illusion and misdirection to confound your enemies.",
-    "effect": "Once per encounter, when you are targeted by an attack, you can cause the attacker to reroll and use the lower result.",
-    "trigger": "When you are targeted by an attack (once per encounter)."
-  },
-  "folder": null,
-  "sort": 0,
-  "flags": {}
-}
-{
-  "_id": "bard_college_of_mirrors_specialization",
-  "name": "College of Mirrors – Specialization",
-  "type": "subclass-feature",
-  "img": "systems/daggerheart/assets/subclass-placeholder.svg",
-  "system": {
-    "baseClass": "Bard",
-    "subclass": "College of Mirrors",
-    "featureType": "specialization",
-    "description": "Your illusions are more convincing, able to distract and mislead many foes.",
-    "effect": "Once per rest, when you cast an illusion spell, you can affect all enemies within Close range.",
-    "trigger": "When you cast an illusion spell (once per rest)."
-  },
-  "folder": null,
-  "sort": 0,
-  "flags": {}
-}
-{
-  "_id": "bard_college_of_mirrors_mastery",
-  "name": "College of Mirrors – Mastery",
-  "type": "subclass-feature",
-  "img": "systems/daggerheart/assets/subclass-placeholder.svg",
-  "system": {
-    "baseClass": "Bard",
-    "subclass": "College of Mirrors",
-    "featureType": "mastery",
-    "description": "You can create multiple convincing duplicates of yourself.",
-    "effect": "As an action, create three illusory duplicates. Until the end of the encounter, when a creature targets you with an attack, roll a d4. On a 1–3, the attack hits a duplicate instead, which is then destroyed.",
-    "trigger": "When you create your illusory duplicates."
-  },
-  "folder": null,
-  "sort": 0,
-  "flags": {}
-}
+{"_id":"druid_circle_of_wilds_foundation","name":"Circle of Wilds – Foundation","type":"subclass-feature","img":"systems/daggerheart/assets/subclass-placeholder.svg","system":{"baseClass":"Druid","subclass":"Circle of Wilds","featureType":"foundation","description":"You are attuned to the wild and can transform into a beast.","effect":"Once per rest, you may transform into a beast with features appropriate to your environment. Gain traits as agreed with your GM.","trigger":"When you invoke your wild shape (once per rest)."},"folder":null,"sort":0,"flags":{}}
+{"_id":"druid_circle_of_wilds_specialization","name":"Circle of Wilds – Specialization","type":"subclass-feature","img":"systems/daggerheart/assets/subclass-placeholder.svg","system":{"baseClass":"Druid","subclass":"Circle of Wilds","featureType":"specialization","description":"Your mastery of transformation deepens, allowing you to retain spellcasting ability in beast form.","effect":"You can cast spells while transformed.","trigger":"When you would cast a spell in beast form."},"folder":null,"sort":0,"flags":{}}
+{"_id":"druid_circle_of_wilds_mastery","name":"Circle of Wilds – Mastery","type":"subclass-feature","img":"systems/daggerheart/assets/subclass-placeholder.svg","system":{"baseClass":"Druid","subclass":"Circle of Wilds","featureType":"mastery","description":"Your wild shape can be maintained indefinitely and grants you new abilities.","effect":"You can remain transformed as long as you wish and gain enhanced movement or senses in beast form.","trigger":"When you choose to remain in beast form."},"folder":null,"sort":0,"flags":{}}
+{"_id":"druid_circle_of_seasons_foundation","name":"Circle of Seasons – Foundation","type":"subclass-feature","img":"systems/daggerheart/assets/subclass-placeholder.svg","system":{"baseClass":"Druid","subclass":"Circle of Seasons","featureType":"foundation","description":"You channel the magic of the changing seasons.","effect":"Once per rest, you may invoke the power of a specific season (Spring: heal an ally, Summer: deal fire damage, Autumn: charm an enemy, Winter: slow a foe).","trigger":"When you invoke seasonal magic (once per rest)."},"folder":null,"sort":0,"flags":{}}
+{"_id":"druid_circle_of_seasons_specialization","name":"Circle of Seasons – Specialization","type":"subclass-feature","img":"systems/daggerheart/assets/subclass-placeholder.svg","system":{"baseClass":"Druid","subclass":"Circle of Seasons","featureType":"specialization","description":"Your control over seasonal magic deepens.","effect":"You can use each seasonal ability once per encounter.","trigger":"When you use a seasonal ability."},"folder":null,"sort":0,"flags":{}}
+{"_id":"druid_circle_of_seasons_mastery","name":"Circle of Seasons – Mastery","type":"subclass-feature","img":"systems/daggerheart/assets/subclass-placeholder.svg","system":{"baseClass":"Druid","subclass":"Circle of Seasons","featureType":"mastery","description":"You embody all seasons at once, gaining their benefits simultaneously.","effect":"While invoking this mastery, you may select which seasonal effect to use on your turn without limit.","trigger":"When you activate your Circle of Seasons mastery."},"folder":null,"sort":0,"flags":{}}
 
+{"_id":"guardian_oath_of_the_ancients_foundation","name":"Oath of the Ancients – Foundation","type":"subclass-feature","img":"systems/daggerheart/assets/subclass-placeholder.svg","system":{"baseClass":"Guardian","subclass":"Oath of the Ancients","featureType":"foundation","description":"You are bound by an ancient pact to protect the natural world.","effect":"You gain resistance to damage from unnatural sources.","trigger":"When you are damaged by an unnatural source."},"folder":null,"sort":0,"flags":{}}
+{"_id":"guardian_oath_of_the_ancients_specialization","name":"Oath of the Ancients – Specialization","type":"subclass-feature","img":"systems/daggerheart/assets/subclass-placeholder.svg","system":{"baseClass":"Guardian","subclass":"Oath of the Ancients","featureType":"specialization","description":"Your protective magic can shield allies.","effect":"Once per rest, grant an ally resistance to damage for one encounter.","trigger":"When you shield an ally (once per rest)."},"folder":null,"sort":0,"flags":{}}
+{"_id":"guardian_oath_of_the_ancients_mastery","name":"Oath of the Ancients – Mastery","type":"subclass-feature","img":"systems/daggerheart/assets/subclass-placeholder.svg","system":{"baseClass":"Guardian","subclass":"Oath of the Ancients","featureType":"mastery","description":"Your bond with ancient powers is unbreakable.","effect":"You are immune to fear and charm effects.","trigger":"When you would be affected by fear or charm."},"folder":null,"sort":0,"flags":{}}
+{"_id":"guardian_oath_of_protection_foundation","name":"Oath of Protection – Foundation","type":"subclass-feature","img":"systems/daggerheart/assets/subclass-placeholder.svg","system":{"baseClass":"Guardian","subclass":"Oath of Protection","featureType":"foundation","description":"You vow to defend the weak.","effect":"Once per rest, take damage in place of an ally within Close range.","trigger":"When an ally within Close range would take damage (once per rest)."},"folder":null,"sort":0,"flags":{}}
+{"_id":"guardian_oath_of_protection_specialization","name":"Oath of Protection – Specialization","type":"subclass-feature","img":"systems/daggerheart/assets/subclass-placeholder.svg","system":{"baseClass":"Guardian","subclass":"Oath of Protection","featureType":"specialization","description":"Your protective magic can block attacks.","effect":"Once per encounter, reduce damage from any attack to 0.","trigger":"When you or an ally within Close range is hit by an attack (once per encounter)."},"folder":null,"sort":0,"flags":{}}
+{"_id":"guardian_oath_of_protection_mastery","name":"Oath of Protection – Mastery","type":"subclass-feature","img":"systems/daggerheart/assets/subclass-placeholder.svg","system":{"baseClass":"Guardian","subclass":"Oath of Protection","featureType":"mastery","description":"You can shield multiple allies at once.","effect":"Grant all allies within Close range resistance to damage for one encounter.","trigger":"When you invoke your mastery."},"folder":null,"sort":0,"flags":{}}

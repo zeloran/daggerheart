@@ -1,4 +1,4 @@
-import { ItemSheet } from "foundryvtt";
+
 
 export class DaggerheartSubclassFeatureSheet extends ItemSheet {
     /** @override */
