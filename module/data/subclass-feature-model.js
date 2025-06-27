@@ -1,6 +1,6 @@
 const { DataModel, fields } = foundry.data;
 
-export class SubclassFeatureModel extends DataModel {
+export class SubclassFeatureModel extends foundry.abstract.TypeDataModel {
     static defineSchema() {
         return {
             baseClass: new fields.StringField({ required: true, initial: "" }),
