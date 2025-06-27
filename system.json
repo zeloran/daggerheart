@@ -16,9 +16,17 @@
     "module/daggerheart.js"
   ],
   "styles": [
-    "styles/daggerheart.css"
+    "styles/daggerheart.css",
+    "styles/item-sheet.css"
   ],
-  "packs": [],
+  "packs": [{
+    "name": "subclass-features",
+    "label": "Subclass Features",
+    "system": "daggerheart",
+    "path": "packs/subclass-features.db",
+    "entity": "Item",
+    "type": "subclass-feature"
+  }],
   "templateVersion": 2,
   "manifest": "https://raw.githubusercontent.com/zeloran/daggerheart/refs/heads/main/system.json",
   "download": "https://github.com/zeloran/daggerheart/releases/download/v0.1.0l/daggerheart-system.zip"

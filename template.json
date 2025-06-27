@@ -32,7 +32,6 @@
       "fearDie": 1,
       "proficiency": 1,
       "experience": [],
-      "abilities": [],
       "spells": [],
       "subclasses": {
         "foundation": [],
@@ -63,7 +62,6 @@
         "name": "",
         "baseScore": 0
       },
-      "abilities": [],
       "spells": [],
       "subclasses": {
         "foundation": [],
@@ -77,7 +75,7 @@
     }
   },
   "Item": {
-    "types": ["spell", "subclass", "ability", "item", "armor", "weapon", "community", "ancestry"],
+    "types": ["spell", "subclass-feature", "item", "armor", "weapon", "community", "ancestry"],
     "spell": {
       "level": 1,
       "domain": "",
@@ -87,15 +85,10 @@
       "duration": "",
       "range": ""
     },
-    "subclass": {
-      "subclassType": "",
-      "name": "",
-      "description": "",
-      "effect": "",
-      "trigger": ""
-    },
-    "ability": {
-      "subtype": "",
+    "subclass-feature": {
+      "baseClass": "",
+      "subclass": "",
+      "featureType": "",
       "description": "",
       "effect": "",
       "trigger": ""

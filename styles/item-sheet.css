@@ -1,0 +1,106 @@
+.daggerheart.item-sheet.subclass-feature-sheet .subclass-feature-card {
+    max-width: 375px;
+    margin: auto;
+    border: 2px solid #ffe47a;
+    border-radius: 20px;
+    background: #fffdfa;
+    box-shadow: 0 4px 16px #232b3c11;
+    padding: 20px 18px 12px 18px;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    color: #232b3c;
+}
+
+.daggerheart.item-sheet.subclass-feature-sheet .sheet-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+}
+
+.daggerheart.item-sheet.subclass-feature-sheet .subclass-badge {
+    width: 38px; height: 54px;
+    background: #e0e0e0;
+    border-radius: 8px;
+    border: 2px solid #ffe47a;
+    margin-right: 10px;
+    background-image: url('systems/daggerheart/assets/subclass-placeholder.svg');
+    background-size: cover;
+}
+
+.daggerheart.item-sheet.subclass-feature-sheet .class-banner {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    top: 14px;
+}
+.daggerheart.item-sheet.subclass-feature-sheet .class-name {
+    background: #ffe47a;
+    color: #232b3c;
+    font-weight: bold;
+    border-radius: 12px 12px 0 0;
+    padding: 3px 18px 2px 18px;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    box-shadow: 0 2px 6px #8882;
+}
+
+.daggerheart.item-sheet.subclass-feature-sheet .feature-title {
+    text-align: center;
+    margin-top: 0.6em;
+    margin-bottom: 0.3em;
+}
+
+.daggerheart.item-sheet.subclass-feature-sheet .feature-title input {
+    font-weight: 900;
+    font-size: 1.35em;
+    text-align: center;
+    border: none;
+    background: transparent;
+    color: #232b3c;
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+.daggerheart.item-sheet.subclass-feature-sheet .feature-type {
+    font-style: italic;
+    text-transform: capitalize;
+    color: #b28a00;
+    font-size: 1.05em;
+}
+
+.daggerheart.item-sheet.subclass-feature-sheet .spell-trait {
+    text-align: left;
+    margin: 1em 0 0.5em 0;
+    color: #800080;
+    font-weight: bold;
+}
+
+.daggerheart.item-sheet.subclass-feature-sheet .feature-desc textarea,
+.daggerheart.item-sheet.subclass-feature-sheet .feature-detail textarea {
+    width: 100%;
+    border: none;
+    background: #fffdfa;
+    color: #232b3c;
+    font-size: 1em;
+    resize: vertical;
+    min-height: 40px;
+    margin-top: 0.25em;
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+.daggerheart.item-sheet.subclass-feature-sheet .feature-desc textarea {
+    font-size: 1.05em;
+    font-weight: 500;
+    min-height: 64px;
+    margin-bottom: 1em;
+}
+
+.daggerheart.item-sheet.subclass-feature-sheet .feature-detail {
+    margin-bottom: 0.7em;
+}
+
+.daggerheart.item-sheet.subclass-feature-sheet label {
+    font-weight: bold;
+    color: #b28a00;
+    font-size: 1em;
+}

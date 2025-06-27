@@ -1,0 +1,104 @@
+{
+  "_id": "bard_college_of_valor_foundation",
+  "name": "College of Valor – Foundation",
+  "type": "subclass-feature",
+  "img": "systems/daggerheart/assets/subclass-placeholder.svg",
+  "system": {
+    "baseClass": "Bard",
+    "subclass": "College of Valor",
+    "featureType": "foundation",
+    "description": "You inspire courage in your allies and lead by example.",
+    "effect": "Whenever you or an ally within Close range marks a fear token, you can choose to mark a hope token instead.",
+    "trigger": "When you or an ally within Close range would mark a fear token."
+  },
+  "folder": null,
+  "sort": 0,
+  "flags": {}
+}
+{
+  "_id": "bard_college_of_valor_specialization",
+  "name": "College of Valor – Specialization",
+  "type": "subclass-feature",
+  "img": "systems/daggerheart/assets/subclass-placeholder.svg",
+  "system": {
+    "baseClass": "Bard",
+    "subclass": "College of Valor",
+    "featureType": "specialization",
+    "description": "Your musical inspiration can rally your companions and strengthen their resolve.",
+    "effect": "Once per rest, when an ally within Close range marks a hope token, they can immediately take another action.",
+    "trigger": "When an ally within Close range marks a hope token (once per rest)."
+  },
+  "folder": null,
+  "sort": 0,
+  "flags": {}
+}
+{
+  "_id": "bard_college_of_valor_mastery",
+  "name": "College of Valor – Mastery",
+  "type": "subclass-feature",
+  "img": "systems/daggerheart/assets/subclass-placeholder.svg",
+  "system": {
+    "baseClass": "Bard",
+    "subclass": "College of Valor",
+    "featureType": "mastery",
+    "description": "Your valorous deeds are legendary and can turn the tide of battle.",
+    "effect": "When you spend a hope token, all allies within Close range may remove a fear token.",
+    "trigger": "When you spend a hope token."
+  },
+  "folder": null,
+  "sort": 0,
+  "flags": {}
+}
+
+{
+  "_id": "bard_college_of_mirrors_foundation",
+  "name": "College of Mirrors – Foundation",
+  "type": "subclass-feature",
+  "img": "systems/daggerheart/assets/subclass-placeholder.svg",
+  "system": {
+    "baseClass": "Bard",
+    "subclass": "College of Mirrors",
+    "featureType": "foundation",
+    "description": "You use illusion and misdirection to confound your enemies.",
+    "effect": "Once per encounter, when you are targeted by an attack, you can cause the attacker to reroll and use the lower result.",
+    "trigger": "When you are targeted by an attack (once per encounter)."
+  },
+  "folder": null,
+  "sort": 0,
+  "flags": {}
+}
+{
+  "_id": "bard_college_of_mirrors_specialization",
+  "name": "College of Mirrors – Specialization",
+  "type": "subclass-feature",
+  "img": "systems/daggerheart/assets/subclass-placeholder.svg",
+  "system": {
+    "baseClass": "Bard",
+    "subclass": "College of Mirrors",
+    "featureType": "specialization",
+    "description": "Your illusions are more convincing, able to distract and mislead many foes.",
+    "effect": "Once per rest, when you cast an illusion spell, you can affect all enemies within Close range.",
+    "trigger": "When you cast an illusion spell (once per rest)."
+  },
+  "folder": null,
+  "sort": 0,
+  "flags": {}
+}
+{
+  "_id": "bard_college_of_mirrors_mastery",
+  "name": "College of Mirrors – Mastery",
+  "type": "subclass-feature",
+  "img": "systems/daggerheart/assets/subclass-placeholder.svg",
+  "system": {
+    "baseClass": "Bard",
+    "subclass": "College of Mirrors",
+    "featureType": "mastery",
+    "description": "You can create multiple convincing duplicates of yourself.",
+    "effect": "As an action, create three illusory duplicates. Until the end of the encounter, when a creature targets you with an attack, roll a d4. On a 1–3, the attack hits a duplicate instead, which is then destroyed.",
+    "trigger": "When you create your illusory duplicates."
+  },
+  "folder": null,
+  "sort": 0,
+  "flags": {}
+}
+
