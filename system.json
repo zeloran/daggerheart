@@ -2,7 +2,7 @@
   "id": "daggerheart",
   "title": "Daggerheart",
   "description": "Daggerheart TTRPG system for Foundry VTT.",
-  "version": "v0.1.0l",
+  "version": "v0.1.0m",
   "compatibility": {
     "minimum": 13,
     "verified": 13
@@ -19,15 +19,17 @@
     "styles/daggerheart.css",
     "styles/item-sheet.css"
   ],
-  "packs": [{
-    "name": "subclass-features",
-    "label": "Subclass Features",
-    "system": "daggerheart",
-    "path": "packs/subclass-features.db",
-    "entity": "Item",
-    "type": "subclass-feature"
-  }],
+  "packs": [
+    {
+      "name": "subclass-features",
+      "label": "Subclass Features",
+      "system": "daggerheart",
+      "path": "packs/subclass-features.db",
+      "entity": "Item",
+      "type": "subclass-feature"
+    }
+  ],
   "templateVersion": 2,
   "manifest": "https://raw.githubusercontent.com/zeloran/daggerheart/refs/heads/main/system.json",
-  "download": "https://github.com/zeloran/daggerheart/releases/download/v0.1.0l/daggerheart-system.zip"
+  "download": "https://github.com/zeloran/daggerheart/releases/download/v0.1.0m/daggerheart-system.zip"
 }
