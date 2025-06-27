@@ -19,6 +19,11 @@
     "styles/daggerheart.css",
     "styles/item-sheet.css"
   ],
+  "documentTypes": {
+    "Item": {
+      "subclass-features": {}
+    }
+  },
   "packs": [
     {
       "name": "subclass-features",
@@ -29,7 +34,6 @@
       "type": "Item"
     }
   ],
-  "templateVersion": 2,
   "manifest": "https://raw.githubusercontent.com/zeloran/daggerheart/refs/heads/main/system.json",
   "download": "https://github.com/zeloran/daggerheart/releases/download/v0.1.0s/daggerheart-system.zip"
 }
