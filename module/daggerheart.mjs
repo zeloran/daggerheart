@@ -30,6 +30,11 @@ export async function rollDuality(diff, actor) {
 Hooks.once("init", function() {
     console.log("Daggerheart | Initializing system");
 
+    Handlebars.registerHelper("capitalize", (str) => {
+        if (typeof str !== "string") return "";
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    });
+
     // Register document classes
     CONFIG.Actor.dataModels.character = DHActorDataModel;
 
