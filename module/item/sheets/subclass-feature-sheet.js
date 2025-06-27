@@ -1,4 +1,4 @@
-export class DaggerheartSubclassFeatureSheet extends foundry.app.sheets.ItemSheet {
+export class DaggerheartSubclassFeatureSheet extends foundry.applications.sheets.ItemSheetV2 {
     static get defaultOptions() {
         return foundry.utils.mergeObject(super.defaultOptions, {
             classes: ["daggerheart", "sheet", "item", "subclass-feature"],
